@@ -1,0 +1,19 @@
+
+.main {
+  background: #fff;
+  padding: 30px;
+  margin: 50px auto;
+  max-width: 450px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.466);
+}
+
+.logo {
+  display: flex;
+  gap: 6em;
+  align-items: center;
+}
+
+.logo img {
+  width: 3em;
+}
