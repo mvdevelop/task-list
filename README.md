@@ -1,70 +1,70 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📝 Task List App
+Uma aplicação de gerenciamento de tarefas simples e eficiente, desenvolvida com React, que permite aos usuários organizar suas atividades diárias, acompanhar o progresso e manter o foco na produtividade com uma interface limpa e intuitiva.
 
-## Available Scripts
+## 🚀 Funcionalidades
+Adição de Tarefas: Crie novas tarefas de forma rápida e fácil.
 
-In the project directory, you can run:
+Controle de Status: Marque tarefas como concluídas ou pendentes com um único clique.
 
-### `npm start`
+Remoção de Itens: Exclua tarefas da lista quando não forem mais necessárias.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Persistência de Dados: Integração com LocalStorage para que suas tarefas não sumam ao atualizar a página.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Contagem de Tarefas: (Se implementado) Visualização do total de tarefas e quantas restam concluir.
 
-### `npm test`
+Design Minimalista: Interface focada na usabilidade e livre de distrações.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tecnologias Utilizadas
+React (Create React App): Biblioteca principal para construção da UI baseada em componentes.
 
-### `npm run build`
+JavaScript (ES6+): Lógica de manipulação de estados e funções de filtragem.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+CSS3: Estilização personalizada para uma experiência visual agradável.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+LocalStorage API: Para salvar os dados diretamente no navegador do usuário.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React Hooks: Uso intensivo de useState e useEffect para controle de ciclo de vida.
 
-### `npm run eject`
+## 📦 Como rodar o projeto
+Clone o repositório:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Bash
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+git clone https://github.com/mvdevelop/task-list.git
+cd task-list
+Instale as dependências:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Bash
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install
+Inicie a aplicação:
 
-## Learn More
+Bash
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
+Acesse: http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📂 Estrutura de Pastas
+Plaintext
 
-### Code Splitting
+task-list/
+├── public/           # Arquivos estáticos
+├── src/
+│   ├── assets/       # Ícones e imagens (se houver)
+│   ├── components/   # Componentes da lista (Form, Item, List)
+│   ├── styles/       # Arquivos de estilização (CSS/SASS)
+│   ├── App.js        # Componente principal e lógica de estado
+│   └── index.js      # Ponto de entrada do React
+└── package.json      # Dependências e scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎨 Preview da Interface
+Nota: Adicione aqui um print do seu projeto (ex: Captura de tela mostrando a lista com algumas tarefas adicionadas e outras marcadas como concluídas).
 
-### Analyzing the Bundle Size
+## 👨‍💻 Autor
+Desenvolvido com ❤️ por mvdevelop.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+GitHub: @mvdevelop
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 Licença
+Este projeto está sob a licença MIT.
