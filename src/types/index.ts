@@ -60,14 +60,3 @@ export interface INotificationProps {
   type: 'success' | 'error' | 'warning' | 'info';
   duration?: number;
 }
-
-export type ITarefa = ITarefa;
-export type ITarefaInput = ITarefaInput;
-export type IFormProps = IFormProps;
-export type ITarefasProps = ITarefasProps;
-export type IErrorBoundaryState = IErrorBoundaryState;
-export type IUseTaskManagerState = IUseTaskManagerState;
-export type IUseTaskManagerProps = IUseTaskManagerProps;
-export type IThemeProps = IThemeProps;
-export type IModalProps = IModalProps;
-export type INotificationProps = INotificationProps;
