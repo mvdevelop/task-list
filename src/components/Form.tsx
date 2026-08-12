@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent } from 'react';
 import { FaPlus } from 'react-icons/fa';
-import { IFormProps } from '../types/Tarefas';
+import { IFormProps } from '../types';
 
 import './form.css';
 

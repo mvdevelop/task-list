@@ -1,25 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import './index.css';
 import logo from '../img/icon.png';
 import Form from './Form';
 import Tarefas from './Tarefas';
-import { ITarefa, IFormProps, ITarefasProps, IUseTaskManagerState, IUseTaskManagerProps } from '../types';
+import { ITarefa, IFormProps, ITarefasProps, IUseTaskManagerState } from '../types';
 
-const initialTarefas: ITarefa[] = [];
+import './main.css';
+
+interface IMainState extends IUseTaskManagerState {
+  novaTarefa: string;
+  tarefas: ITarefa[];
+  index: number;
+}
 
 const Main: React.FC = () => {
-  const [state, setState] = useState<ITarefaState>({
+  const [state, setState] = useState<IMainState>({
     novaTarefa: '',
-    tarefas: initialTarefas,
+    tarefas: [],
     index: -1,
   });
 
   useEffect(() => {
-    const storedTarefas = JSON.parse(localStorage.getItem('tarefas'));
+    const storedTarefas = localStorage.getItem('tarefas');
     if (storedTarefas) {
       setState(prevState => ({
         ...prevState,
-        tarefas: storedTarefas,
+        tarefas: JSON.parse(storedTarefas),
       }));
     }
   }, []);
@@ -37,11 +42,11 @@ const Main: React.FC = () => {
     if (index === -1) {
       setState({
         ...state,
-        tarefas: [...novasTarefas, novaTarefa],
+        tarefas: [...novasTarefas, { id: Date.now().toString(), text: novaTarefa, concluida: false }],
         novaTarefa: '',
       });
     } else {
-      novasTarefas[index] = novaTarefa;
+      novasTarefas[index] = { ...novasTarefas[index], text: novaTarefa };
       setState({
         ...state,
         tarefas: [...novasTarefas],
@@ -74,6 +79,20 @@ const Main: React.FC = () => {
     });
   };
 
+  const handleToggle = (index: number) => {
+    const novasTarefas = [...state.tarefas];
+    novasTarefas[index] = {
+      ...novasTarefas[index],
+      concluida: !novasTarefas[index].concluida,
+    };
+    setState({
+      ...state,
+      tarefas: [...novasTarefas],
+    });
+  };
+
+  const { novaTarefa: novaTarefaValue, tarefas: tarefasList } = state;
+
   return (
     <div className='main'>
       <div className='logo'>
@@ -84,13 +103,14 @@ const Main: React.FC = () => {
       <Form
         handleSubmit={handleSubmit}
         handleChange={handleChange}
-        novaTarefa={novaTarefa}
+        novaTarefa={novaTarefaValue}
       />
 
       <Tarefas
-        tarefas={state.tarefas}
+        tarefas={tarefasList}
         handleEdit={handleEdit}
         handleDelete={handleDelete}
+        handleToggle={handleToggle}
       />
     </div>
   );

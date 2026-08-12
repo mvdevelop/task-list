@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Main from './components/Main';
 
-import App from './App';
+const App = () => {
+  return <Main />;
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
@@ -9,3 +12,5 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+export default App;
