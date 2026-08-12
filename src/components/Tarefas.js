@@ -12,13 +12,13 @@ export default function Tarefas({ tarefas, handleEdit, handleDelete }) {
       <ul className='tarefas'>
         {tarefas.map((tarefa, index) => (
           <li key={tarefa}>
-            {tarefa}
+            <span>{tarefa}</span>
           <div className='faBtn'>
             <FaEdit
-              onClick={(e) => this.handleEdit(e, index)} className='edit'/>
+              onClick={(e) => handleEdit(e, index)} className='edit'/>
 
             <FaWindowClose
-              onClick={(e) => this.handleDelete(e, index)} className='delete'/>
+              onClick={(e) => handleDelete(e, index)} className='delete'/>
           </div>
           </li>
         ))}
